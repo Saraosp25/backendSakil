@@ -45,8 +45,8 @@ public class CustomerDao {
         return msj;
 
     }
-    /*
-    public String updateAddress(String direc,Integer id){
+  
+    public String updateAddress(Integer id,String direc){
         
         String msj1="";
         String query = "update address inner join customer on customer.address_id=address.address_id set address.address=(?), address.last_update=CURRENT_TIMESTAMP where customer.address_id=(?)";
@@ -55,9 +55,10 @@ public class CustomerDao {
                 Connection conn = dataSource.getConnection();
                 PreparedStatement pstmt =  conn.prepareStatement(query);
                 ) {
-            System.out.println(query);
+           
             pstmt.setString(1, direc);
             pstmt.setInt(2, id);
+            Integer rs= pstmt.executeUpdate();
             pstmt.executeUpdate();
             msj1="Agregado Sara 1";
         } catch (SQLException ex) {
@@ -65,6 +66,6 @@ public class CustomerDao {
             // TODO gestionar correctamente la excepción
         }
         return msj1;
-    }*/
+    }
     
 }

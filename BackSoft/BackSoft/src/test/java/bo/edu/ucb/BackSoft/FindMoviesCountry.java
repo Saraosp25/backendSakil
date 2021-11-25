@@ -19,6 +19,24 @@ class findByFilmsCountry {
 
 	@Autowired
 	FilmPaisBl filmPaisBl;
+	@Test
+	void findUnico() {
+
+		List<Film> films = filmPaisBl.findByFilmCountry(2);
+
+		// Probamos que el resultado sea el epserado
+		assertNotNull(films, "La busqueda retorno una lista nula");
+		assertEquals(1, films.size(), "La busqueda debería retornar exactamente un elemento");
+		Film film = films.get(0);
+		assertEquals("AIRPORT POLLOCK", film.getTitle(), "El titulo de la película no coincide");
+		assertTrue( film.getDescription().startsWith("A Epic Tale of a Moose And a Girl who must Confront a Monkey in Ancient India"), "La descripcion de la película no coincide");
+		
+
+		
+	}
+
+
+
 
 	@Test
 	void findSiempre() {

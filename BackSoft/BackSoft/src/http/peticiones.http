@@ -57,7 +57,9 @@ Content-Type: application/json
 }
 
 ###Modificar Address Customer por id de direccion
-PUT url 
+PUT http://localhost:8080/customer/address/1
 Content-Type: application/json
 
-content
+{
+    "address": "This is a test"
+}

@@ -19,6 +19,7 @@ import bo.edu.ucb.BackSoft.bl.FilmTitleBl;
 import bo.edu.ucb.BackSoft.bl.PaymentBl;
 import bo.edu.ucb.BackSoft.bl.RentalBl;
 import bo.edu.ucb.BackSoft.dto.Actor;
+import bo.edu.ucb.BackSoft.dto.Address;
 import bo.edu.ucb.BackSoft.dto.Customer;
 import bo.edu.ucb.BackSoft.dto.Film;
 import bo.edu.ucb.BackSoft.dto.Payment;
@@ -111,13 +112,11 @@ public class Sakilapi {
     public String createPayment(@RequestBody Payment payment) {
         return paymentBl.createPayment(payment);
 
-    }
+    } 
 
-    // Modificar direccion
-    /*@PutMapping(value = "/customer/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public List<Customer> updateAddress(@PathVariable(name = "id") Integer id,
-            @PathVariable(name = "address") String address) {
-        return customerBl.updateAddress( address,id);
-    }*/
+    
+    
+
+   
 
 }

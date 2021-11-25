@@ -24,10 +24,8 @@ public class CustomerBl {
         return customerDao.createCustomer(customer);
         
     }
-    /*public List<Customer> updateAddress(String address,Integer id) {
-        if (address == null ||id == null ) {
-            throw new SakilaException(403, "Bad request: The actor parameter is mandatory and can't be null or empty");
-        }
-        return customerDao.updateAddress(address,id);
-    }*/
+    public String updateAddress(Integer customerId,String address ) {
+        return customerDao.updateAddress(customerId, address);
+    }
+    
 }
