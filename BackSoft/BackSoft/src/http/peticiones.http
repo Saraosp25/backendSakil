@@ -1,0 +1,63 @@
+###Busqueda de film por estado
+GET http://localhost:8080/film/1/Maude HTTP/1.1
+
+###Busqueda de actor por estado 
+GET http://localhost:8080/actor/1/Ed/Chase HTTP/1.1
+
+###Total de films de country
+GET http://localhost:8080/filmA/store/1 HTTP/1.1
+
+###peliculas a la semana
+GET http://localhost:8080/filmS/store/2 HTTP/1.1
+
+###Peliculas de estrenos por country
+GET http://localhost:8080/filmE/store/1 HTTP/1.1
+
+###Peliculas de Siempre por country
+GET http://localhost:8080/filmA/store/1 HTTP/1.1
+
+###Busqueda de fil por id en un country 
+GET http://localhost:8080/storeU/1/2 HTTP/1.1
+
+###Agregar rental
+POST http://localhost:8080/rental 
+Content-Type: application/json
+
+{
+
+   "inventoryId": 130,
+   "customerId":23,
+    "returnDate": "2021-11-28T00:00:00.000+00:00",
+   "staffId":1
+
+}
+
+###Agregar Payment
+POST http://localhost:8080/payment 
+Content-Type: application/json
+
+{
+    "customerId": 1,
+    "staffId": 2,
+    "rentalId": 345,
+    "mont": 0.99
+}
+
+###Agregar Customer
+POST http://localhost:8080/customer
+Content-Type: application/json
+
+{
+    "storeId": 1 ,
+    "firstName": "Sara",
+    "lastName": "Salazar",
+    "email": "sara.salazar@ucb.edu.bo",
+    "address": 605,
+    "active": 1
+}
+
+###Modificar Address Customer por id de direccion
+PUT url 
+Content-Type: application/json
+
+content
