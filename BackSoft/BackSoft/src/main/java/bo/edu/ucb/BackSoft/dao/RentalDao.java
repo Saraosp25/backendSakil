@@ -23,7 +23,7 @@ public class RentalDao {
 
     public String createRental(Rental rental) {
         String msj="";
-        String query = "Insert into rental values((select max(r.rental_id) from rental r)+1, now(),(?),(?),(?),(?),now())";
+        String query = "Insert into rental values((select max(r.rental_id) from rental r)+1, now(),((select i.inventory_id from inventory i where i.film_id=(?) limit 1)),(select customer_id from customer where email= (?)),(?),(?),now())";
 
         try (
             Connection conn = dataSource.getConnection(); 
@@ -32,7 +32,7 @@ public class RentalDao {
         ) {
 
             pstmt.setInt(1, rental.getInventoryId());
-            pstmt.setInt(2, rental.getCustomerId());
+            pstmt.setString(2, rental.getEmail());
             pstmt.setString(3, rental.getReturnDate());
             pstmt.setInt(4, rental.getStaffId());
             

@@ -23,7 +23,7 @@ public class ActorDao {
 
     public List<Actor> findByActor(Integer id,String actorn, String actorl) {
         List<Actor> result = new ArrayList<>();
-        String query = "SELECT a.actor_id"+
+        String query = "SELECT DISTINCT a.actor_id"+
         ",a.first_name"+
         ",a.last_name"+
         ",f.film_id"+

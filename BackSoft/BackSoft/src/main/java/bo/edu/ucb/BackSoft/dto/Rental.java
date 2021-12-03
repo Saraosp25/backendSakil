@@ -8,7 +8,7 @@ public class Rental {
 
     
     private Integer inventoryId;
-    private Integer customerId;
+    private String email;
     private Integer staffId;
     private Date returnDate;
 
@@ -17,6 +17,14 @@ public class Rental {
 
     public Integer getInventoryId() {
         return inventoryId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getReturnDate() {
@@ -35,14 +43,7 @@ public class Rental {
         this.inventoryId = inventoryId;
     }
 
-    public Integer getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
-    }
-
+   
    
 
     public Integer getStaffId() {
