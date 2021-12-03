@@ -1,5 +1,5 @@
 ###Busqueda de film por estado
-GET http://localhost:8080/film/1/Maude HTTP/1.1
+GET http://localhost:8080/film/2/Maude HTTP/1.1
 
 ###Busqueda de actor por estado 
 GET http://localhost:8080/actor/1/Ed/Chase HTTP/1.1
